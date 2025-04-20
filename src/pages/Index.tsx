@@ -1,6 +1,8 @@
 
 import React, { useEffect, useState } from "react";
-import { Gift, Heart, Calendar, Star, Confetti, Music, MessageSquare, Balloon, Cake, Hug } from "lucide-react";
+// Correct imports with lowercase icon names for confetti and balloon; remove Hug, replacing with Heart as fallback
+import { Gift, Heart, Calendar, Star, confetti as ConfettiIcon, music as MusicIcon, messageSquare as MessageSquareIcon, balloon as BalloonIcon, cake as CakeIcon } from "lucide-react";
+
 import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -641,7 +643,7 @@ const SurpriseGiftReveal = () => {
   );
 };
 
-// Virtual Hug Button component
+// Virtual Hug Button component: replaced GIF icon with Heart icon only as hug icon not in lucide-react
 const VirtualHugButton = () => {
   const [showHug, setShowHug] = useState(false);
 
@@ -725,3 +727,4 @@ const Index = () => {
 };
 
 export default Index;
+
